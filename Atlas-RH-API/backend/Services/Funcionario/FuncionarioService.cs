@@ -1,0 +1,174 @@
+﻿using AutoMapper;
+using backend.Data;
+using backend.Dto.Funcionario;
+using backend.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace backend.Services.Funcionario
+{
+    public class FuncionarioService : IFuncionarioInterface
+    {
+        private readonly AppDbContext _context;
+        private readonly IMapper _mapper;
+        public FuncionarioService(AppDbContext context, IMapper mapper)
+        {
+            _context = context;
+            _mapper = mapper;
+        }
+        public async Task<ResponseModel<FuncionarioModel>> BuscarFuncionarioPorId(int id)
+        {
+            ResponseModel<FuncionarioModel> response = new();
+
+            try
+            {
+                var funcionario = await _context.Funcionarios.FindAsync(id);
+
+                if(funcionario == null)
+                {
+                    response.Mensagem = "Funcionário não encontrado!";
+                    return response;
+                }
+                response.Dados = funcionario;
+                response.Mensagem = "Funcionário localizado com sucesso";
+                return response;
+            }
+            catch(Exception ex)
+            {
+                response.Status = false;
+                response.Mensagem = ex.Message;
+                return response;
+            }
+        }
+
+        public async Task<ResponseModel<FuncionarioModel>> EditarFuncionario(FuncionarioEdicaoDto funcionarioEdicaoDto)
+        {
+            ResponseModel<FuncionarioModel> response = new();
+
+            try
+            {
+                var funcionarioBanco = await _context.Funcionarios.FindAsync(funcionarioEdicaoDto.Id);
+
+                if (funcionarioBanco == null)
+                {
+                    response.Mensagem = "Funcionario não encontrado";
+                    return response;
+                }
+
+                funcionarioBanco.Nome = funcionarioEdicaoDto.Nome;
+                funcionarioBanco.Email = funcionarioEdicaoDto.Email;
+                funcionarioBanco.Salario = funcionarioEdicaoDto.Salario;
+                funcionarioBanco.Status = funcionarioEdicaoDto.Status;
+                funcionarioBanco.DepartamentoId = funcionarioEdicaoDto.DepartamentoId;
+                funcionarioBanco.CargoId = funcionarioEdicaoDto.CargoId;
+
+                _context.Update(funcionarioBanco);
+                await _context.SaveChangesAsync();
+
+                response.Dados = funcionarioBanco;
+                response.Mensagem = $"Funcionario {funcionarioBanco.Nome} editado com sucesso";
+                return response;
+
+            }
+            catch (Exception ex)
+            {
+                response.Status = false;
+                response.Mensagem = ex.Message;
+                return response;
+            }
+        }
+
+        public async Task<ResponseModel<List<FuncionarioModel>>> ListarFuncionarios()
+        {
+            ResponseModel<List<FuncionarioModel>> response = new();
+
+            try
+            {
+                var funcionarios = await _context.Funcionarios.ToListAsync();
+
+                if(funcionarios.Count == 0)
+                {
+                    response.Mensagem = "Nenhum funcionário encontrado";
+                    return response;
+                }
+
+                response.Dados = funcionarios;
+                response.Mensagem = "Funcionários localizados com sucesso";
+                return response;
+            }
+            catch(Exception ex)
+            {
+                response.Status = false;
+                response.Mensagem = ex.Message;
+                return response;
+            }
+        }
+
+        public async Task<ResponseModel<FuncionarioModel>> RegistrarFuncionario(FuncionarioCriacaoDto funcionarioCriacaoDto)
+        {
+            ResponseModel<FuncionarioModel> response = new();
+
+            try
+            {
+                if (!VerificaSeExisteCpfRepetidos(funcionarioCriacaoDto))
+                {
+                    response.Mensagem = "Funcionário já cadastrado";
+                    return response;
+                }
+                FuncionarioModel funcionario = _mapper.Map<FuncionarioModel>(funcionarioCriacaoDto);
+
+                _context.Add(funcionario);
+                await _context.SaveChangesAsync();
+
+                response.Dados = funcionario;
+                response.Mensagem = "Funcionário cadastrado com sucesso";
+                return response;
+            }
+            catch(Exception ex)
+            {
+                response.Status = false;
+                response.Mensagem = ex.Message;
+                return response;
+            }
+        }
+
+        public async Task<ResponseModel<FuncionarioModel>> RemoverFuncionario(int id)
+        {
+            ResponseModel<FuncionarioModel> response = new();
+
+            try
+            {
+                var funcionario = await _context.Funcionarios.FindAsync(id);
+
+                if(funcionario == null)
+                {
+                    response.Mensagem = "Funcionário não encontrado";
+                    return response;
+                }
+
+                _context.Remove(funcionario);
+                await _context.SaveChangesAsync();
+
+                response.Dados = funcionario;
+                response.Mensagem = $"Funcionário {funcionario.Nome} removido com sucesso";
+                return response;
+            }
+            catch(Exception ex)
+            {
+                response.Status = false;
+                response.Mensagem = ex.Message;
+                return response;
+            }
+        }
+
+        private bool VerificaSeExisteCpfRepetidos(FuncionarioCriacaoDto funcionarioCriacaoDto)
+        {
+            var funcionario = _context.Funcionarios.FirstOrDefault(item => item.Cpf == funcionarioCriacaoDto.Cpf);
+
+            if( funcionario != null)
+            {
+                return false;
+            }
+            return true;
+        }
+    }
+}
