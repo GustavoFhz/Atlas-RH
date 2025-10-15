@@ -1,35 +1,30 @@
-📘 Atlas RH API
-🏗️ Sobre o projeto
+# 📘 Atlas RH API
 
-O Atlas RH API é uma aplicação backend desenvolvida em .NET 9, voltada para gestão de recursos humanos — permitindo o gerenciamento de departamentos, cargos e funcionários.
+## 🏗️ Sobre o projeto
+
+O **Atlas RH API** é uma aplicação **backend** desenvolvida em **.NET 9**, voltada para **gestão de recursos humanos** — permitindo o gerenciamento de **departamentos, cargos e funcionários**.
 
 O projeto segue boas práticas de arquitetura, como:
+- 🧱 Separação por camadas (**Controllers**, **Services**, **DTOs**, **Data**);
+- 🔁 Retornos padronizados via **ResponseModel**;
+- 🔐 Autenticação **JWT**;
+- 📘 Documentação automática com **Swagger**.
 
-Separação por camadas (Controllers, Services, DTOs, Data);
+---
 
-Retornos padronizados via ResponseModel;
+## ⚙️ Tecnologias utilizadas
 
-Autenticação JWT;
+- 🧩 **.NET 9 / ASP.NET Core Web API**
+- 🗄️ **Entity Framework Core**
+- 💾 **SQL Server**
+- 📜 **Swagger (Swashbuckle)**
+- 🔄 **AutoMapper**
+- 🔐 **JWT Authentication**
 
-Documentação automática com Swagger.
+---
 
-⚙️ Tecnologias utilizadas
+## 📂 Estrutura principal
 
-🧩 .NET 9 / ASP.NET Core Web API
-
-🗄️ Entity Framework Core
-
-💾 SQL Server
-
-📜 Swagger (Swashbuckle)
-
-🔄 AutoMapper
-
-🔐 JWT Authentication
-
-
-
-📂 Estrutura principal
 backend/
  ├── Controllers/
  │   ├── CargoController.cs
