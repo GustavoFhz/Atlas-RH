@@ -1,6 +1,7 @@
 using backend.Config;
 using backend.Data;
 using backend.Services;
+using backend.Services.Cargo;
 using backend.Services.Departamento;
 using backend.Services.Funcionario;
 using backend.Services.Senha;
@@ -36,6 +37,7 @@ builder.Services.AddScoped<IUsuarioInterface, UsuarioService>();
 builder.Services.AddScoped<ISenhaInterface, SenhaService>();
 builder.Services.AddScoped<IFuncionarioInterface, FuncionarioService>();
 builder.Services.AddScoped<IDepartamentoInterface, DepartamentoService>();
+builder.Services.AddScoped<ICargoInterface, CargoService>();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 

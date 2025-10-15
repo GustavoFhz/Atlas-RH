@@ -1,4 +1,5 @@
 ﻿using Microsoft.OpenApi.Models;
+using System.Reflection;
 
 namespace backend.Config
 {
@@ -11,8 +12,13 @@ namespace backend.Config
             {
                 c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
                 {
-                    Title = "HR Management API",
-                    Version = "v1"
+                    Title = "Gestão de RH API",
+                    Version = "v1",
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Gustavo",
+                        Email = "gustavojesus79@gmail.com"
+                    }
                 });
 
                 // Configuração do Bearer
@@ -40,6 +46,11 @@ namespace backend.Config
                         new string[]{}
                     }
                 });
+
+                // Adiciona suporte aos comentários XML
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath);
             });
         }
 
@@ -50,6 +61,7 @@ namespace backend.Config
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "HR Management API v1");
             });
+
         }
     }
 }

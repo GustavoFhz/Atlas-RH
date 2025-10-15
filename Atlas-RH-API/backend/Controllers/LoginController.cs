@@ -15,14 +15,22 @@ namespace backend.Controllers
         {
             _usuarioInterface = usuarioInterface;
         }
-
+        /// <summary>
+        /// Registra um usuário
+        /// </summary>
+        /// <param name="usuarioCriacaoDto"></param>
+        /// <returns></returns>
         [HttpPost("Register")]
         public async Task<IActionResult> RegistrarUsuario(UsuarioCriacaoDto usuarioCriacaoDto)
         {
             var usuario = await _usuarioInterface.RegistrarUsuario(usuarioCriacaoDto);
             return Ok(usuario);
         }
-
+        /// <summary>
+        /// Faz login de um usuário
+        /// </summary>
+        /// <param name="usuarioLoginDto"></param>
+        /// <returns></returns>
         [HttpPost("Login")]
         public async Task<IActionResult> Login(UsuarioLoginDto usuarioLoginDto)
         {

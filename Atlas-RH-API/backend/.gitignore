@@ -1,1 +1,19 @@
+# Arquivos temporários do Visual Studio
+.vs/
+*.user
+*.suo
+*.vscode/
+
+# Compilação
+bin/
+obj/
+Debug/
+Release/
+
+# Arquivos de configuração locais
+appsettings.Development.json
 .env
+
+# Sistema
+Thumbs.db
+*.log

@@ -164,7 +164,7 @@ namespace backend.Services.Funcionario
         {
             var funcionario = _context.Funcionarios.FirstOrDefault(item => item.Cpf == funcionarioCriacaoDto.Cpf);
 
-            if( funcionario != null)
+            if(funcionario != null)
             {
                 return false;
             }
