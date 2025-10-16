@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>backend</name>
+    </assembly>
+    <members>
+        <member name="M:backend.Controllers.CargoController.ListarCargos">
+            <summary>
+            Lista todos os cargos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:backend.Controllers.CargoController.BuscarCargoPorId(System.Int32)">
+            <summary>
+            Buscar um cargo pelo Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:backend.Controllers.CargoController.RemoverCargo(System.Int32)">
+            <summary>
+            Deleta um cargo pelo Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:backend.Controllers.CargoController.RegistrarCargo(backend.Dto.Cargo.CargoCriacaoDto)">
+            <summary>
+            Registra um cargo
+            </summary>
+            <param name="cargoCriacaoDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:backend.Controllers.CargoController.EditarCargo(backend.Dto.Cargo.CargoEdicaoDto)">
+            <summary>
+            Edita um cargo
+            </summary>
+            <param name="cargoEdicaoDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:backend.Controllers.DepartamentoController.ListarDepartamentos">
+            <summary>
+            Lista todos os departamentos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:backend.Controllers.DepartamentoController.BuscarDepartamentoPorId(System.Int32)">
+            <summary>
+            Busca os departamentos pelo Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:backend.Controllers.DepartamentoController.RemoverDepartamento(System.Int32)">
+            <summary>
+            Remove um departamento pelo Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:backend.Controllers.DepartamentoController.RegistrarDepartamento(backend.Dto.Departamento.DepartamentoCriacaoDto)">
+            <summary>
+            Registra um departamento
+            </summary>
+            <param name="departamentoCriacaoDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:backend.Controllers.DepartamentoController.ListarFuncionariosPorDepartamento(System.Int32)">
+            <summary>
+            Lista funcionários por departamento
+            </summary>
+            <param name="departamentoId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:backend.Controllers.DepartamentoController.EditarDepartamento(backend.Dto.Departamento.DepartamentoEdicaoDto)">
+            <summary>
+            Edita um departamento 
+            </summary>
+            <param name="departamentoEdicaoDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:backend.Controllers.FuncionarioController.ListarFuncionarios">
+            <summary>
+            Lista todos os funcionários
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:backend.Controllers.FuncionarioController.BuscarFuncionarioPorId(System.Int32)">
+            <summary>
+            Busca um funcionário pelo Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:backend.Controllers.FuncionarioController.RemoverFuncionario(System.Int32)">
+            <summary>
+            Remove um funcionário
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:backend.Controllers.FuncionarioController.RegistrarFuncionario(backend.Dto.Funcionario.FuncionarioCriacaoDto)">
+            <summary>
+            Registra um funcionário
+            </summary>
+            <param name="funcionarioCriacaoDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:backend.Controllers.FuncionarioController.EditarFuncionario(backend.Dto.Funcionario.FuncionarioEdicaoDto)">
+            <summary>
+            Edita um funcionário
+            </summary>
+            <param name="funcionarioEdicaoDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:backend.Controllers.LoginController.RegistrarUsuario(backend.Dto.Usuario.UsuarioCriacaoDto)">
+            <summary>
+            Registra um usuário
+            </summary>
+            <param name="usuarioCriacaoDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:backend.Controllers.LoginController.Login(backend.Dto.Login.UsuarioLoginDto)">
+            <summary>
+            Faz login de um usuário
+            </summary>
+            <param name="usuarioLoginDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:backend.Controllers.UsuarioController.ListarUsuarios">
+            <summary>
+            Lista todos os usuários
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:backend.Controllers.UsuarioController.BuscarUsuarioPorId(System.Int32)">
+            <summary>
+            Busca um usuário pelo Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:backend.Controllers.UsuarioController.RemoverUsuario(System.Int32)">
+            <summary>
+            Remove um usuário pelo Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:backend.Controllers.UsuarioController.EditarUsuario(backend.Dto.Usuario.UsuarioEdicaoDto)">
+            <summary>
+            Edita um usuário
+            </summary>
+            <param name="usuarioEdicaoDto"></param>
+            <returns></returns>
+        </member>
+        <member name="T:backend.Migrations.inicialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:backend.Migrations.inicialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:backend.Migrations.inicialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:backend.Migrations.inicialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:backend.Migrations.criacaoDasTabelas">
+            <inheritdoc />
+        </member>
+        <member name="M:backend.Migrations.criacaoDasTabelas.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:backend.Migrations.criacaoDasTabelas.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:backend.Migrations.criacaoDasTabelas.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:backend.Migrations.correcaoMigrationAddUsuario">
+            <inheritdoc />
+        </member>
+        <member name="M:backend.Migrations.correcaoMigrationAddUsuario.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:backend.Migrations.correcaoMigrationAddUsuario.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:backend.Migrations.correcaoMigrationAddUsuario.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

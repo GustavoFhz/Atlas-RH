@@ -343,3 +343,9 @@ C:\Users\gusta\OneDrive\Área de Trabalho\Atlas-RH\Atlas-RH-API\backend\obj\Debu
 C:\Users\gusta\OneDrive\Área de Trabalho\Atlas-RH\Atlas-RH-API\backend\obj\Debug\net9.0\ref\backend.dll
 C:\Users\gusta\OneDrive\Área de Trabalho\Atlas-RH\Atlas-RH-API\backend\bin\Debug\net9.0\backend.xml
 C:\Users\gusta\OneDrive\Área de Trabalho\Atlas-RH\Atlas-RH-API\backend\obj\Debug\net9.0\backend.xml
+C:\Users\gusta\OneDrive\Área de Trabalho\Atlas-RH\Atlas-RH-API\backend\bin\Debug\net9.0\FluentAssertions.dll
+C:\Users\gusta\OneDrive\Área de Trabalho\Atlas-RH\Atlas-RH-API\backend\bin\Debug\net9.0\xunit.abstractions.dll
+C:\Users\gusta\OneDrive\Área de Trabalho\Atlas-RH\Atlas-RH-API\backend\bin\Debug\net9.0\xunit.assert.dll
+C:\Users\gusta\OneDrive\Área de Trabalho\Atlas-RH\Atlas-RH-API\backend\bin\Debug\net9.0\xunit.core.dll
+C:\Users\gusta\OneDrive\Área de Trabalho\Atlas-RH\Atlas-RH-API\backend\bin\Debug\net9.0\xunit.execution.dotnet.dll
+C:\Users\gusta\OneDrive\Área de Trabalho\Atlas-RH\Atlas-RH-API\backend\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.InMemory.dll
