@@ -1,5 +1,6 @@
 ﻿using backend.Dto.Funcionario;
 using backend.Services.Funcionario;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,6 +8,7 @@ namespace backend.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class FuncionarioController : ControllerBase
     {
         private readonly IFuncionarioInterface _funcionarioInterface;

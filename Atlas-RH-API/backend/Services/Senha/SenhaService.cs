@@ -25,16 +25,16 @@ namespace backend.Services.Senha
         public string CriarToken(UsuarioModel usuario)
         {
             List<Claim> claims = new()
-    {
-        new Claim("UsuarioLogin", usuario.UsuarioLogin),
-        new Claim("UserId", usuario.Id.ToString())
-    };
+        {
+            new Claim("UsuarioLogin", usuario.UsuarioLogin),
+            new Claim("UserId", usuario.Id.ToString())
+            };
 
             // Pega a chave do .env
             var tokenSecret = Environment.GetEnvironmentVariable("JWT_SECRET") ?? throw new Exception("JWT_SECRET não encontrado.");
             var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(tokenSecret));
 
-            var cred = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
+            var cred = new SigningCredentials(key, SecurityAlgorithms.HmacSha512);
 
             var expirationDays = int.Parse(Environment.GetEnvironmentVariable("JWT_EXPIRATION_DAYS") ?? "1");
 

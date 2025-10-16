@@ -1,5 +1,6 @@
 ﻿using backend.Dto.Departamento;
 using backend.Services.Departamento;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,6 +8,7 @@ namespace backend.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class DepartamentoController : ControllerBase
     {
         private readonly IDepartamentoInterface _departamentoInterface;

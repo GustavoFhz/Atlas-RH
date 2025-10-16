@@ -29,7 +29,7 @@ namespace backend.Config
                     Scheme = "Bearer",
                     BearerFormat = "JWT",
                     In = ParameterLocation.Header,
-                    Description = "Digite 'Bearer {seu token}' para autenticar"
+                    Description = "Digite '{seu token}' para autenticar"
                 });
 
                 c.AddSecurityRequirement(new OpenApiSecurityRequirement

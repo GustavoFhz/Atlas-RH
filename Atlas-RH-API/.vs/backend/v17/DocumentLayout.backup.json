@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\gusta\\OneDrive\\\u00C1rea de Trabalho\\Atlas-RH\\Atlas-RH-API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{33A16F00-A8FB-4B9C-902C-94B03D56088C}|Atlas-RH-Testes\\Atlas-RH-Testes.csproj|c:\\users\\gusta\\onedrive\\\u00E1rea de trabalho\\atlas-rh\\atlas-rh-api\\atlas-rh-testes\\usuarioteste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33A16F00-A8FB-4B9C-902C-94B03D56088C}|Atlas-RH-Testes\\Atlas-RH-Testes.csproj|solutionrelative:atlas-rh-testes\\usuarioteste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8AA095E8-A615-43D7-B5CE-3E39AB747EFD}|backend\\backend.csproj|c:\\users\\gusta\\onedrive\\\u00E1rea de trabalho\\atlas-rh\\atlas-rh-api\\backend\\services\\senha\\senhaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AA095E8-A615-43D7-B5CE-3E39AB747EFD}|backend\\backend.csproj|solutionrelative:backend\\services\\senha\\senhaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{33A16F00-A8FB-4B9C-902C-94B03D56088C}|Atlas-RH-Testes\\Atlas-RH-Testes.csproj|c:\\users\\gusta\\onedrive\\\u00E1rea de trabalho\\atlas-rh\\atlas-rh-api\\atlas-rh-testes\\funcionarioteste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33A16F00-A8FB-4B9C-902C-94B03D56088C}|Atlas-RH-Testes\\Atlas-RH-Testes.csproj|solutionrelative:atlas-rh-testes\\funcionarioteste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8AA095E8-A615-43D7-B5CE-3E39AB747EFD}|backend\\backend.csproj|c:\\users\\gusta\\onedrive\\\u00E1rea de trabalho\\atlas-rh\\atlas-rh-api\\backend\\services\\usuario\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AA095E8-A615-43D7-B5CE-3E39AB747EFD}|backend\\backend.csproj|solutionrelative:backend\\services\\usuario\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AA095E8-A615-43D7-B5CE-3E39AB747EFD}|backend\\backend.csproj|c:\\users\\gusta\\onedrive\\\u00E1rea de trabalho\\atlas-rh\\atlas-rh-api\\backend\\config\\swaggerconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AA095E8-A615-43D7-B5CE-3E39AB747EFD}|backend\\backend.csproj|solutionrelative:backend\\config\\swaggerconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AA095E8-A615-43D7-B5CE-3E39AB747EFD}|backend\\backend.csproj|c:\\users\\gusta\\onedrive\\\u00E1rea de trabalho\\atlas-rh\\atlas-rh-api\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AA095E8-A615-43D7-B5CE-3E39AB747EFD}|backend\\backend.csproj|solutionrelative:backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AA095E8-A615-43D7-B5CE-3E39AB747EFD}|backend\\backend.csproj|c:\\users\\gusta\\onedrive\\\u00E1rea de trabalho\\atlas-rh\\atlas-rh-api\\backend\\.env||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8AA095E8-A615-43D7-B5CE-3E39AB747EFD}|backend\\backend.csproj|solutionrelative:backend\\.env||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -27,27 +39,66 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FuncionarioTeste.cs",
-              "DocumentMoniker": "C:\\Users\\gusta\\OneDrive\\\u00C1rea de Trabalho\\Atlas-RH\\Atlas-RH-API\\Atlas-RH-Testes\\FuncionarioTeste.cs",
-              "RelativeDocumentMoniker": "Atlas-RH-Testes\\FuncionarioTeste.cs",
-              "ToolTip": "C:\\Users\\gusta\\OneDrive\\\u00C1rea de Trabalho\\Atlas-RH\\Atlas-RH-API\\Atlas-RH-Testes\\FuncionarioTeste.cs",
-              "RelativeToolTip": "Atlas-RH-Testes\\FuncionarioTeste.cs",
-              "ViewState": "AgIAAI4AAAAAAAAAAAAiwJsAAAAKAAAAAAAAAA==",
+              "Title": "UsuarioService.cs",
+              "DocumentMoniker": "C:\\Users\\gusta\\OneDrive\\\u00C1rea de Trabalho\\Atlas-RH\\Atlas-RH-API\\backend\\Services\\Usuario\\UsuarioService.cs",
+              "RelativeDocumentMoniker": "backend\\Services\\Usuario\\UsuarioService.cs",
+              "ToolTip": "C:\\Users\\gusta\\OneDrive\\\u00C1rea de Trabalho\\Atlas-RH\\Atlas-RH-API\\backend\\Services\\Usuario\\UsuarioService.cs",
+              "RelativeToolTip": "backend\\Services\\Usuario\\UsuarioService.cs",
+              "ViewState": "AgIAAMwAAAAAAAAAAAAcwNsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T15:31:25.999Z",
+              "WhenOpened": "2025-10-16T16:31:41.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\gusta\\OneDrive\\\u00C1rea de Trabalho\\Atlas-RH\\Atlas-RH-API\\backend\\Program.cs",
+              "RelativeDocumentMoniker": "backend\\Program.cs",
+              "ToolTip": "C:\\Users\\gusta\\OneDrive\\\u00C1rea de Trabalho\\Atlas-RH\\Atlas-RH-API\\backend\\Program.cs",
+              "RelativeToolTip": "backend\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAuwEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T16:29:06.779Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UsuarioTeste.cs",
-              "DocumentMoniker": "C:\\Users\\gusta\\OneDrive\\\u00C1rea de Trabalho\\Atlas-RH\\Atlas-RH-API\\Atlas-RH-Testes\\UsuarioTeste.cs",
-              "RelativeDocumentMoniker": "Atlas-RH-Testes\\UsuarioTeste.cs",
-              "ToolTip": "C:\\Users\\gusta\\OneDrive\\\u00C1rea de Trabalho\\Atlas-RH\\Atlas-RH-API\\Atlas-RH-Testes\\UsuarioTeste.cs",
-              "RelativeToolTip": "Atlas-RH-Testes\\UsuarioTeste.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHkAAAAAAAAAAAAAAA==",
+              "Title": "SenhaService.cs",
+              "DocumentMoniker": "C:\\Users\\gusta\\OneDrive\\\u00C1rea de Trabalho\\Atlas-RH\\Atlas-RH-API\\backend\\Services\\Senha\\SenhaService.cs",
+              "RelativeDocumentMoniker": "backend\\Services\\Senha\\SenhaService.cs",
+              "ToolTip": "C:\\Users\\gusta\\OneDrive\\\u00C1rea de Trabalho\\Atlas-RH\\Atlas-RH-API\\backend\\Services\\Senha\\SenhaService.cs",
+              "RelativeToolTip": "backend\\Services\\Senha\\SenhaService.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAA+wCQAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T15:31:11.484Z",
+              "WhenOpened": "2025-10-16T16:28:15.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": ".env",
+              "DocumentMoniker": "C:\\Users\\gusta\\OneDrive\\\u00C1rea de Trabalho\\Atlas-RH\\Atlas-RH-API\\backend\\.env",
+              "RelativeDocumentMoniker": "backend\\.env",
+              "ToolTip": "C:\\Users\\gusta\\OneDrive\\\u00C1rea de Trabalho\\Atlas-RH\\Atlas-RH-API\\backend\\.env",
+              "RelativeToolTip": "backend\\.env",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-10-16T16:28:05.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SwaggerConfig.cs",
+              "DocumentMoniker": "C:\\Users\\gusta\\OneDrive\\\u00C1rea de Trabalho\\Atlas-RH\\Atlas-RH-API\\backend\\Config\\SwaggerConfig.cs",
+              "RelativeDocumentMoniker": "backend\\Config\\SwaggerConfig.cs",
+              "ToolTip": "C:\\Users\\gusta\\OneDrive\\\u00C1rea de Trabalho\\Atlas-RH\\Atlas-RH-API\\backend\\Config\\SwaggerConfig.cs",
+              "RelativeToolTip": "backend\\Config\\SwaggerConfig.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAcwCUAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T16:27:56.98Z",
               "EditorCaption": ""
             }
           ]
