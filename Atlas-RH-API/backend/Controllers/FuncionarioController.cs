@@ -54,7 +54,7 @@ namespace backend.Controllers
         /// <param name="funcionarioCriacaoDto"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<IActionResult> RegistrarFuncionario(FuncionarioCriacaoDto funcionarioCriacaoDto)
+        public async Task<IActionResult> RegistrarFuncionario([FromBody] FuncionarioCriacaoDto funcionarioCriacaoDto)
         {
             var funcionario = await _funcionarioInterface.RegistrarFuncionario(funcionarioCriacaoDto);
             return Ok(funcionario);
@@ -65,7 +65,7 @@ namespace backend.Controllers
         /// <param name="funcionarioEdicaoDto"></param>
         /// <returns></returns>
         [HttpPut]
-        public async Task<IActionResult> EditarFuncionario(FuncionarioEdicaoDto funcionarioEdicaoDto)
+        public async Task<IActionResult> EditarFuncionario([FromBody] FuncionarioEdicaoDto funcionarioEdicaoDto)
         {
             var funcionario = await _funcionarioInterface.EditarFuncionario(funcionarioEdicaoDto);
             return Ok(funcionario);

@@ -2,6 +2,7 @@
 using backend.Data;
 using backend.Dto.Funcionario;
 using backend.Models;
+using backend.Services.Cep;
 using Microsoft.EntityFrameworkCore;
 
 namespace backend.Services.Funcionario
@@ -10,10 +11,13 @@ namespace backend.Services.Funcionario
     {
         private readonly AppDbContext _context;
         private readonly IMapper _mapper;
-        public FuncionarioService(AppDbContext context, IMapper mapper)
+        private readonly ICepInterface _cepInterface;
+
+        public FuncionarioService(AppDbContext context, IMapper mapper, ICepInterface cepInterface)
         {
             _context = context;
             _mapper = mapper;
+            _cepInterface = cepInterface;
         }
         public async Task<ResponseModel<FuncionarioModel>> BuscarFuncionarioPorId(int id)
         {
@@ -50,24 +54,31 @@ namespace backend.Services.Funcionario
 
                 if (funcionarioBanco == null)
                 {
-                    response.Mensagem = "Funcionario não encontrado";
+                    response.Mensagem = "Funcionário não encontrado";
                     return response;
                 }
 
-                funcionarioBanco.Nome = funcionarioEdicaoDto.Nome;
-                funcionarioBanco.Email = funcionarioEdicaoDto.Email;
-                funcionarioBanco.Salario = funcionarioEdicaoDto.Salario;
-                funcionarioBanco.Status = funcionarioEdicaoDto.Status;
-                funcionarioBanco.DepartamentoId = funcionarioEdicaoDto.DepartamentoId;
-                funcionarioBanco.CargoId = funcionarioEdicaoDto.CargoId;
+                // Atualiza os campos básicos via AutoMapper
+                _mapper.Map(funcionarioEdicaoDto, funcionarioBanco);
+
+                // Atualiza endereço APENAS se CEP for diferente e não nulo
+                if (!string.IsNullOrEmpty(funcionarioEdicaoDto.Cep) &&
+                    funcionarioEdicaoDto.Cep != funcionarioBanco.Cep)
+                {
+                    var enderecoResponse = await _cepInterface.EnderecoPorCep(funcionarioEdicaoDto.Cep);
+
+                    if (enderecoResponse != null)
+                    {
+                        _mapper.Map(enderecoResponse, funcionarioBanco);
+                    }
+                }
 
                 _context.Update(funcionarioBanco);
                 await _context.SaveChangesAsync();
 
                 response.Dados = funcionarioBanco;
-                response.Mensagem = $"Funcionario {funcionarioBanco.Nome} editado com sucesso";
+                response.Mensagem = $"Funcionário {funcionarioBanco.Nome} editado com sucesso";
                 return response;
-
             }
             catch (Exception ex)
             {
@@ -76,6 +87,7 @@ namespace backend.Services.Funcionario
                 return response;
             }
         }
+
 
         public async Task<ResponseModel<List<FuncionarioModel>>> ListarFuncionarios()
         {
@@ -108,14 +120,27 @@ namespace backend.Services.Funcionario
             ResponseModel<FuncionarioModel> response = new();
 
             try
-            {
+            {              
                 if (!VerificaSeExisteCpfRepetidos(funcionarioCriacaoDto))
                 {
                     response.Mensagem = "Funcionário já cadastrado";
                     return response;
                 }
+
+                // Mapeia os campos básicos do DTO para o Model
                 FuncionarioModel funcionario = _mapper.Map<FuncionarioModel>(funcionarioCriacaoDto);
 
+                // Consulta CEP se informado
+                if (!string.IsNullOrEmpty(funcionarioCriacaoDto.Cep))
+                {
+                    var enderecoResponse = await _cepInterface.EnderecoPorCep(funcionarioCriacaoDto.Cep);
+
+                    if (enderecoResponse != null)
+                    {
+                        _mapper.Map(enderecoResponse, funcionario);
+                    }
+                }
+              
                 _context.Add(funcionario);
                 await _context.SaveChangesAsync();
 
@@ -123,13 +148,14 @@ namespace backend.Services.Funcionario
                 response.Mensagem = "Funcionário cadastrado com sucesso";
                 return response;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 response.Status = false;
                 response.Mensagem = ex.Message;
                 return response;
             }
         }
+
 
         public async Task<ResponseModel<FuncionarioModel>> RemoverFuncionario(int id)
         {

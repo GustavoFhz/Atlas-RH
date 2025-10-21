@@ -188,12 +188,10 @@ namespace backend.Services.Departamento
         private bool VerificaSeExisteDepartamentoRepetido(DepartamentoCriacaoDto departamentoCriacaoDto)
         {
             var departamento = _context.Departamentos.FirstOrDefault(item => item.Nome == departamentoCriacaoDto.Nome);
-            
-            if(departamento != null)
-            {
-                return false;
-            }
-            return false;
+
+            return departamento == null; // true se não existir, false se já existir
         }
+
     }
 }
+

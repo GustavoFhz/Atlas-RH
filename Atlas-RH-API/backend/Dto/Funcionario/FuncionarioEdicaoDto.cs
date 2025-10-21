@@ -28,5 +28,9 @@ namespace backend.Dto.Funcionario
 
         [Required(ErrorMessage = "O cargo é obrigatório.")]
         public int CargoId { get; set; }
+
+        [Required(ErrorMessage = "O CEP é obrigatório.")]
+        [RegularExpression(@"^\d{8}$", ErrorMessage = "O CEP deve conter 8 dígitos.")]
+        public string Cep { get; set; }
     }
 }

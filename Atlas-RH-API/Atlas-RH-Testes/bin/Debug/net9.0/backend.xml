@@ -190,5 +190,17 @@
         <member name="M:backend.Migrations.correcaoMigrationAddUsuario.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="T:backend.Migrations.AdicionandoCep">
+            <inheritdoc />
+        </member>
+        <member name="M:backend.Migrations.AdicionandoCep.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:backend.Migrations.AdicionandoCep.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:backend.Migrations.AdicionandoCep.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>

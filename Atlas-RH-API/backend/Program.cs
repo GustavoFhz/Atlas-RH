@@ -2,6 +2,7 @@ using backend.Config;
 using backend.Data;
 using backend.Services;
 using backend.Services.Cargo;
+using backend.Services.Cep;
 using backend.Services.Departamento;
 using backend.Services.Funcionario;
 using backend.Services.Senha;
@@ -38,6 +39,7 @@ builder.Services.AddScoped<ISenhaInterface, SenhaService>();
 builder.Services.AddScoped<IFuncionarioInterface, FuncionarioService>();
 builder.Services.AddScoped<IDepartamentoInterface, DepartamentoService>();
 builder.Services.AddScoped<ICargoInterface, CargoService>();
+builder.Services.AddHttpClient<ICepInterface, CepService>();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
