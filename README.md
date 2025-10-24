@@ -1,30 +1,43 @@
-# 📘 Atlas RH API
+📘 Atlas RH
+🏗️ Sobre o projeto
 
-## 🏗️ Sobre o projeto
+O Atlas RH é uma aplicação full-stack para gestão de recursos humanos, construída com .NET 9 no backend e tecnologias modernas no frontend.
+Ela permite gerenciar departamentos, cargos e funcionários, garantindo autenticação segura, testes automatizados e documentação clara.
 
-O **Atlas RH API** é uma aplicação **backend** desenvolvida em **.NET 9**, voltada para **gestão de recursos humanos** — permitindo o gerenciamento de **departamentos, cargos e funcionários**.
+Principais características:
 
-O projeto segue boas práticas de arquitetura, como:
-- 🧱 Separação por camadas (**Controllers**, **Services**, **DTOs**, **Data**);
-- 🔁 Retornos padronizados via **ResponseModel**;
-- 🔐 Autenticação **JWT**;
-- 📘 Documentação automática com **Swagger**.
+🧱 Arquitetura organizada por camadas (Controllers, Services, DTOs, Data)
 
----
+🔐 Autenticação JWT para segurança
 
-## ⚙️ Tecnologias utilizadas
+🧪 Testes unitários no backend para garantir qualidade
 
-- 🧩 **.NET 9 / ASP.NET Core Web API**
-- 🗄️ **Entity Framework Core**
-- 💾 **SQL Server**
-- 📜 **Swagger (Swashbuckle)**
-- 🔄 **AutoMapper**
-- 🔐 **JWT Authentication**
+📘 Documentação automática com Swagger
 
----
+⚡ Integração com frontend moderno
 
-## 📂 Estrutura principal
+⚙️ Tecnologias utilizadas
+Backend
 
+🧩 .NET 9 / ASP.NET Core Web API
+
+🗄️ Entity Framework Core (SQL Server)
+
+📜 Swagger (Swashbuckle)
+
+🔄 AutoMapper
+
+🧪 xUnit / Moq (testes unitários)
+
+🔐 JWT Authentication
+
+Frontend
+
+💻 Angular / React / Vue (colocar a que você usa)
+
+🎨 Bootstrap / Tailwind CSS (estilização)
+
+📂 Estrutura principal do backend
 backend/
  ├── Controllers/
  │   ├── CargoController.cs
@@ -32,62 +45,58 @@ backend/
  │   ├── FuncionarioController.cs
  │   ├── LoginController.cs
  │   └── UsuarioController.cs
- │
  ├── Services/
  │   ├── Cargo/
  │   ├── Departamento/
  │   └── Funcionario/
- │
  ├── Dto/
  │   ├── Cargo/
  │   ├── Departamento/
  │   ├── Funcionario/
  │   ├── Senha/
  │   └── Usuario/
- │
  ├── Data/
  │   └── AppDbContext.cs
- │
  ├── Config/
  │   └── SwaggerConfig.cs
- │
+ ├── Tests/
+ │   └── UnitTests/
  └── Program.cs
-
+ 
 🚀 Como executar o projeto
 
-Clone o repositório:
+1. Clone o repositório
 git clone https://github.com/GustavoFhz/Atlas-RH.git
-
-Acesse a pasta do backend:
+2. Acesse a pasta do backend
 cd Atlas-RH/Atlas-RH-API/backend
-
-Restaure as dependências:
-dotnet restore
-
-Configure a conexão com o banco de dados:
-
-No arquivo .env, atualize a string de conexão.
+3. dotnet restore
+4. Configure a conexão com o banco de dados
+Atualize o arquivo .env com a string de conexão correta
 dotnet ef database update
-
-Rode a aplicação:
+5. Execute a aplicação
 dotnet run
-
-Acesse a documentação:
+6. Acesse a documentação
 https://localhost:7070/swagger
 
+
+🧪 Testes unitários
+
+Para rodar os testes:
+dotnet test
+
+Todos os testes são implementados usando xUnit e Moq, garantindo que Services e Controllers funcionem corretamente.
+
 📋 Endpoints principais
+Método	Endpoint	Descrição
+GET	/api/departamentos	Lista todos os departamentos
+POST	/api/departamentos	Cadastra um novo departamento
+GET	/api/departamentos/{id}/funcionarios	Lista funcionários por departamento
+GET	/api/cargos	Lista todos os cargos
+POST	/api/cargos	Registra um cargo
+PUT	/api/cargos	Edita um cargo
+DELETE	/api/cargos/{id}	Remove um cargo
 
-| Método | Endpoint                               | Descrição                           |
-| :----: | :------------------------------------- | :---------------------------------- |
-|   GET  | `/api/departamentos`                   | Lista todos os departamentos        |
-|  POST  | `/api/departamentos`                   | Cadastra um novo departamento       |
-|   GET  | `/api/departamentos/{id}/funcionarios` | Lista funcionários por departamento |
-|   GET  | `/api/cargos`                          | Lista todos os cargos               |
-|  POST  | `/api/cargos`                          | Registra um cargo                   |
-|   PUT  | `/api/cargos`                          | Edita um cargo                      |
-| DELETE | `/api/cargos/{id}`                     | Remove um cargo                     |
-
-🧠 Padrão de resposta
+Padrão de resposta
 {
   "status": true,
   "mensagem": "Operação realizada com sucesso",
@@ -95,7 +104,8 @@ https://localhost:7070/swagger
 }
 
 👨‍💻 Autor
+
 Gustavo Fhz
 📧 gustavojesus79@gmail.com
 
-💼 github.com/GustavoFhz
+💼 GitHub
