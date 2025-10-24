@@ -1,0 +1,6 @@
+/* Para todos os links do sidebar */
+.sidebar a,
+.sidebar .dropdown-item,
+.sidebar .profile-link {
+  cursor: pointer; /* faz o mouse virar mãozinha */
+}

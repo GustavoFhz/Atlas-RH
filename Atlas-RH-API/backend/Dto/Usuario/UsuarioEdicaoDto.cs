@@ -17,5 +17,6 @@ namespace backend.Dto.Usuario
 
         [StringLength(100, MinimumLength = 6, ErrorMessage = "A nova senha deve ter pelo menos 6 caracteres.")]
         public string? NovaSenha { get; set; }
+
     }
 }

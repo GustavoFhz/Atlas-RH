@@ -349,3 +349,9 @@ C:\Users\gusta\OneDrive\Área de Trabalho\Atlas-RH\Atlas-RH-API\backend\bin\Debu
 C:\Users\gusta\OneDrive\Área de Trabalho\Atlas-RH\Atlas-RH-API\backend\bin\Debug\net9.0\xunit.core.dll
 C:\Users\gusta\OneDrive\Área de Trabalho\Atlas-RH\Atlas-RH-API\backend\bin\Debug\net9.0\xunit.execution.dotnet.dll
 C:\Users\gusta\OneDrive\Área de Trabalho\Atlas-RH\Atlas-RH-API\backend\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\gusta\OneDrive\Área de Trabalho\Atlas-RH\Atlas-RH-API\backend\bin\Debug\net9.0\out\web.config
+C:\Users\gusta\OneDrive\Área de Trabalho\Atlas-RH\Atlas-RH-API\backend\bin\Debug\net9.0\out\appsettings.Development.json
+C:\Users\gusta\OneDrive\Área de Trabalho\Atlas-RH\Atlas-RH-API\backend\bin\Debug\net9.0\out\appsettings.json
+C:\Users\gusta\OneDrive\Área de Trabalho\Atlas-RH\Atlas-RH-API\backend\bin\Debug\net9.0\out\backend.deps.json
+C:\Users\gusta\OneDrive\Área de Trabalho\Atlas-RH\Atlas-RH-API\backend\bin\Debug\net9.0\out\backend.runtimeconfig.json
+C:\Users\gusta\OneDrive\Área de Trabalho\Atlas-RH\Atlas-RH-API\backend\bin\Debug\net9.0\out\backend.staticwebassets.endpoints.json

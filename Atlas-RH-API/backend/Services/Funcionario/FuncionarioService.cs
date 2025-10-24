@@ -174,8 +174,9 @@ namespace backend.Services.Funcionario
                 _context.Remove(funcionario);
                 await _context.SaveChangesAsync();
 
-                response.Dados = funcionario;
+                
                 response.Mensagem = $"Funcionário {funcionario.Nome} removido com sucesso";
+                response.Dados = funcionario;
                 return response;
             }
             catch(Exception ex)

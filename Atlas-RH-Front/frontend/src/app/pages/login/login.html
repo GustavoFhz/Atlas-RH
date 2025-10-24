@@ -1,0 +1,58 @@
+<div class="d-flex justify-content-center align-items-center vh-100" style="background: #f0f2f5;">
+  <div class="card p-5 shadow-lg rounded-4" style="width: 360px; background: linear-gradient(145deg, #ffffff, #e6f0ff);">
+    <h3 class="text-center mb-5 fw-bold text-primary">Login</h3>
+
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <div class="mb-4">
+        <label class="form-label fw-semibold">
+          <i class="bi bi-envelope-fill me-2 text-primary"></i> Usuário
+        </label>
+        <input
+          type="text"
+          class="form-control shadow-sm rounded-3"
+          formControlName="usuarioLogin"
+          [ngClass]="{
+            'is-invalid': loginForm.get('usuarioLogin')?.invalid && loginForm.get('usuarioLogin')?.touched
+          }"
+          placeholder="Digite seu usuário"
+        />
+        <div
+          class="invalid-feedback"
+          *ngIf="loginForm.get('usuarioLogin')?.invalid && loginForm.get('usuarioLogin')?.touched"
+        >
+          Digite um login válido
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <label class="form-label fw-semibold">
+          <i class="bi bi-lock-fill me-2 text-primary"></i> Senha
+        </label>
+        <input
+          type="password"
+          class="form-control shadow-sm rounded-3"
+          formControlName="senha"
+          [ngClass]="{
+            'is-invalid': loginForm.get('senha')?.invalid && loginForm.get('senha')?.touched
+          }"
+          placeholder="Digite sua senha"
+        />
+        <div
+          class="invalid-feedback"
+          *ngIf="loginForm.get('senha')?.invalid && loginForm.get('senha')?.touched"
+        >
+          A senha é obrigatória
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between align-items-center gap-3 mt-4">
+        <button type="submit" class="btn btn-primary flex-fill shadow-sm fw-bold">
+          Entrar
+        </button>
+        <button class="btn btn-outline-primary flex-fill fw-bold" [routerLink]="['/cadastro']">
+          Criar Conta
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

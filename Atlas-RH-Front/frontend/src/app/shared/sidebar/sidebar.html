@@ -1,0 +1,54 @@
+<div class="sidebar d-flex flex-column flex-shrink-0 p-3">
+  <a href="/inicio" class="logo d-flex align-items-center mb-4 text-decoration-none">
+    <i class="bi bi-boxes me-2 fs-4"></i>
+    <span class="fs-5 fw-bold">Atlas-RH</span>
+  </a>
+
+  <ul class="nav flex-column gap-2">
+    <li>
+      <a href="/inicio" class="nav-link d-flex align-items-center">
+        <i class="bi bi-house-door me-2"></i> Início
+      </a>
+    </li>
+    <li>
+      <a href="#" class="nav-link d-flex align-items-center">
+        <i class="bi bi-people me-2"></i> Funcionários
+      </a>
+    </li>
+    <li>
+      <a href="#" class="nav-link d-flex align-items-center">
+        <i class="bi bi-building me-2"></i> Departamentos
+      </a>
+    </li>
+    <li>
+      <a href="#" class="nav-link d-flex align-items-center">
+        <i class="bi bi-briefcase me-2"></i> Cargos
+      </a>
+    </li>
+  </ul>
+
+  <hr class="my-4" />
+
+  <div class="mt-auto dropdown">
+    <a
+      href="#"
+      class="d-flex align-items-center text-decoration-none dropdown-toggle profile-link"
+      data-bs-toggle="dropdown"
+    >
+      <i class="bi bi-person-circle fs-4 me-2"></i>
+      <span>Admin</span>
+    </a>
+    <ul class="dropdown-menu shadow">
+      <li>
+        <a class="dropdown-item" (click)="irParaHome()">
+          <i class="bi bi-gear me-2"></i> Configurações
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item" (click)="deslogar()">
+          <i class="bi bi-door-open me-2"></i> Deslogar
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
