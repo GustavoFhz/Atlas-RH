@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { Formulario } from '../../../componentes/formulario/formulario';
-import { UsuarioCriacaoDto } from '../../../models/usuarioCriacaoDto';
+
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { Autenticacao } from '../../../services/autenticacao';
+import { Autenticacao } from '../../../services/AutentificacaoService/autenticacao';
+import { UsuarioCriacaoDto } from '../../../models/UsuarioModel/usuarioCriacaoDto';
+
 
 @Component({
   selector: 'app-cadastrar',

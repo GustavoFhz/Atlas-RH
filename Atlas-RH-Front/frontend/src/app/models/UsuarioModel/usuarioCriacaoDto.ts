@@ -1,4 +1,3 @@
-
 export interface UsuarioCriacaoDto{   
     nome: string,
     usuarioLogin: string,

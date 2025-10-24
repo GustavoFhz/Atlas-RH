@@ -1,10 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from '../../environments/environment.development';
+
 import { Observable } from 'rxjs';
-import { Response } from '../models/reponseModel';
-import { UsuarioModel } from '../models/usuarioModel';
-import { UsuarioEdicaoDto } from '../models/usuarioEdicaoDto';
+import { UsuarioModel } from '../../models/UsuarioModel/usuarioModel';
+import { environment } from '../../../environments/environment.development';
+import { Response } from '../../models/reponseModel';
+import { UsuarioEdicaoDto } from '../../models/UsuarioModel/usuarioEdicaoDto';
+
 
 
 @Injectable({

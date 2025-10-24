@@ -1,0 +1,63 @@
+<div class="container mt-5 p-4 rounded shadow-sm bg-light">
+  <h1 class="text-center mb-4 text-primary">
+    <i class="bi bi-person-circle"></i> {{ descTitulo }}
+  </h1>
+
+  <form [formGroup]="cargoForm" (ngSubmit)="submit()">
+    <!-- Nome -->
+    <div class="mt-3">
+      <label class="form-label fw-bold"> <i class="bi bi-card-text"></i> Nome: </label>
+      <input
+        type="text"
+        class="form-control shadow-sm"
+        formControlName="nome"
+        [ngClass]="{'is-invalid': cargoForm.get('nome')?.invalid && cargoForm.get('nome')?.touched}"
+        placeholder="Insira o Nome"
+      />
+      <div class="invalid-feedback" *ngIf="cargoForm.get('nome')?.invalid && cargoForm.get('nome')?.touched">
+        O nome é obrigatório
+      </div>
+    </div>
+
+    <!-- Nível -->
+    <div class="mt-3">
+      <label class="form-label fw-bold"> <i class="bi bi-person"></i> Nível: </label>
+      <select
+        class="form-control shadow-sm"
+        formControlName="nivel"
+        [ngClass]="{'is-invalid': cargoForm.get('nivel')?.invalid && cargoForm.get('nivel')?.touched}"
+      >
+        <option value="">Selecione o nível</option>
+        <option *ngFor="let n of niveis" [value]="n">{{ n }}</option>
+      </select>
+      <div class="invalid-feedback" *ngIf="cargoForm.get('nivel')?.invalid && cargoForm.get('nivel')?.touched">
+        O nível é obrigatório
+      </div>
+    </div>
+
+    <!-- Descrição -->
+    <div class="mt-3">
+      <label class="form-label fw-bold"><i class="bi bi-lock"></i> Descrição:</label>
+      <input
+        type="text"
+        class="form-control shadow-sm"
+        formControlName="descricao"
+        [ngClass]="{'is-invalid': cargoForm.get('descricao')?.invalid && cargoForm.get('descricao')?.touched}"
+        placeholder="Insira a Descrição"
+      />
+      <div class="invalid-feedback" *ngIf="cargoForm.get('descricao')?.invalid && cargoForm.get('descricao')?.touched">
+        A descrição é obrigatória
+      </div>
+    </div>
+
+    <!-- Botões -->
+    <div class="d-flex mt-4 gap-3">
+      <button class="btn btn-success w-50 shadow-sm" type="submit">
+        <i class="bi bi-check-circle"></i> {{ btnAcao }}
+      </button>
+      <a class="btn btn-info w-50 shadow-sm" [routerLink]="['/homeCargo']">
+        <i class="bi bi-arrow-left"></i> Voltar
+      </a>
+    </div>
+  </form>
+</div>

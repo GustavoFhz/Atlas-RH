@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Autenticacao } from '../../services/autenticacao';
+
 import {
   FormBuilder,
   FormGroup,
@@ -10,6 +10,7 @@ import {
 import { Router, RouterModule } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
+import { Autenticacao } from '../../services/AutentificacaoService/autenticacao';
 
 @Component({
   selector: 'app-login',

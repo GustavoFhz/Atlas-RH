@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { UsuarioCriacaoDto } from '../../models/usuarioCriacaoDto';
-import { UsuarioEdicaoDto } from '../../models/usuarioEdicaoDto';
+
 import {
   FormControl,
   FormGroup,
@@ -10,6 +9,8 @@ import {
 } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { UsuarioCriacaoDto } from '../../models/UsuarioModel/usuarioCriacaoDto';
+import { UsuarioEdicaoDto } from '../../models/UsuarioModel/usuarioEdicaoDto';
 
 @Component({
   selector: 'app-formulario',

@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { UsuarioService } from '../../../services/usuario-service';
+
 import { ActivatedRoute, RouterModule } from '@angular/router';
-import { UsuarioModel } from '../../../models/usuarioModel';
+
 import { CommonModule } from '@angular/common';
+import { UsuarioModel } from '../../../models/UsuarioModel/usuarioModel';
+import { UsuarioService } from '../../../services/UsuarioService/usuario-service';
 
 @Component({
   selector: 'app-detalhes',

@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { UsuarioService } from '../../../services/usuario-service';
-import { UsuarioModel } from '../../../models/usuarioModel';
+
 import { CommonModule } from '@angular/common';
 import { ToastrService } from 'ngx-toastr';
 import { RouterModule } from '@angular/router';
+import { UsuarioModel } from '../../../models/UsuarioModel/usuarioModel';
+import { UsuarioService } from '../../../services/UsuarioService/usuario-service';
 
 
 

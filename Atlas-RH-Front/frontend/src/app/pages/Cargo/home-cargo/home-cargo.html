@@ -1,0 +1,81 @@
+<div class="container my-5">
+  <!-- Topo: Cadastrar Cargo -->
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="text-primary fw-bold mb-0">Lista de Cargos</h2>
+    <button class="btn btn-success shadow-sm"
+    [routerLink]="['/cadastro-cargo']"
+    >
+      <i class="bi bi-person-plus me-1"></i> Cadastrar Cargo
+    </button>
+  </div>
+</div>
+
+<!-- Campo de Pesquisa -->
+<div class="mb-4">
+  <div class="input-group shadow-sm">
+    <span class="input-group-text bg-white border-end-0">
+      <i class="bi bi-search"></i>
+    </span>
+    <input
+      #inputField
+      type="text"
+      class="form-control border-start-0"
+      placeholder="Pesquisar por cargo..."
+      (input)="pesquisar(inputField.value)"
+    />
+  </div>
+</div>
+
+<!-- Tabela -->
+<div class="table-responsive shadow-sm rounded">
+  <table class="table table-hover table-bordered align-middle text-center mb-0">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Nível</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Lista de usuários -->
+      @if (cargos.length > 0) { @for (cargo of cargos; track cargo.id) {
+      <tr>
+        <td>{{ cargo.id }}</td>
+        <td>{{ cargo.nome }}</td>
+        <td>{{ cargo.nivel }}</td>
+        <td>{{ cargo.descricao }}</td>
+
+        <td>
+          <div class="d-flex justify-content-center gap-2">
+            <button
+              class="btn btn-warning btn-sm d-flex align-items-center"
+              [routerLink]="['/editar-cargo', cargo.id]"
+            >
+              <i class="bi bi-pencil-square me-1"></i> Editar
+            </button>
+            <button
+              class="btn btn-info btn-sm d-flex align-items-center"
+              [routerLink]="['/detalhes-cargo', cargo.id]"
+            >
+              <i class="bi bi-file-earmark-text me-1"></i> Detalhes
+            </button>
+
+            <button
+              class="btn btn-danger btn-sm d-flex align-items-center"
+              (click)="remover(cargo.id)"
+            >
+              <i class="bi bi-trash me-1"></i> Remover
+            </button>
+          </div>
+        </td>
+      </tr>
+      } } @else {
+      <tr>
+        <td colspan="4" class="text-muted py-3">Nenhum cargo cadastrado.</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>

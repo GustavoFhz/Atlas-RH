@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { Autenticacao } from './autenticacao';
+import { Autenticacao } from '../autenticacao';
 
 describe('Autenticacao', () => {
   let service: Autenticacao;

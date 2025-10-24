@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Formulario } from '../../../componentes/formulario/formulario';
-import { UsuarioService } from '../../../services/usuario-service';
+
 import { ActivatedRoute, Router } from '@angular/router';
-import { UsuarioModel } from '../../../models/usuarioModel';
+
 import { CommonModule, NgIf } from '@angular/common';
-import { UsuarioEdicaoDto } from '../../../models/usuarioEdicaoDto';
+
 import { ToastrService } from 'ngx-toastr';
+import { UsuarioModel } from '../../../models/UsuarioModel/usuarioModel';
+import { UsuarioService } from '../../../services/UsuarioService/usuario-service';
+import { UsuarioEdicaoDto } from '../../../models/UsuarioModel/usuarioEdicaoDto';
 
 @Component({
   selector: 'app-editar',
@@ -27,7 +30,6 @@ export class Editar implements OnInit {
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-
     this.usuarioService.BuscarUsuarioPorId(id).subscribe((response) => {
       this.usuario = response.dados;
     });
