@@ -8,7 +8,6 @@ import { Response } from '../../models/reponseModel';
 import { UsuarioEdicaoDto } from '../../models/UsuarioModel/usuarioEdicaoDto';
 
 
-
 @Injectable({
   providedIn: 'root',
 })

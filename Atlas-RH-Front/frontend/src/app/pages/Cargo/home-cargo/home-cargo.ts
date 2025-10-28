@@ -23,11 +23,11 @@ export class HomeCargo implements OnInit {
     });
   }
   pesquisar(value: string) {
-    const val = value.toLowerCase();
-    this.cargos = this.cargosGeral.filter((cargo) => {
-      cargo.nome.toLocaleLowerCase().includes(val);
-    });
-  }
+  const val = value.toLowerCase();
+  this.cargos = this.cargosGeral.filter((cargo) =>
+    cargo.nome.toLowerCase().includes(val)
+  );
+}
   remover(id: number) {
     this.cargoService.RemoverCargo(id).subscribe((response) => {
       if (response.dados != null) {

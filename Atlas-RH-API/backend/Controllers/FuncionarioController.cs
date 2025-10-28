@@ -1,4 +1,5 @@
 ﻿using backend.Dto.Funcionario;
+using backend.Services.Cep;
 using backend.Services.Funcionario;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -12,9 +13,11 @@ namespace backend.Controllers
     public class FuncionarioController : ControllerBase
     {
         private readonly IFuncionarioInterface _funcionarioInterface;
-        public FuncionarioController(IFuncionarioInterface funcionarioInterface)
+        private readonly ICepInterface _cepInterface;
+        public FuncionarioController(IFuncionarioInterface funcionarioInterface, ICepInterface cepInterface)
         {
             _funcionarioInterface = funcionarioInterface;
+            _cepInterface = cepInterface;
         }
         /// <summary>
         /// Lista todos os funcionários
@@ -70,5 +73,35 @@ namespace backend.Controllers
             var funcionario = await _funcionarioInterface.EditarFuncionario(funcionarioEdicaoDto);
             return Ok(funcionario);
         }
+
+        /// <summary>
+        /// Busca Cep
+        /// </summary>
+        /// <param name="cep"></param>
+        /// <returns></returns>
+        [HttpGet("cep/{cep}")]
+
+        public async Task<IActionResult> BuscarCep(string cep)
+        {
+            if (string.IsNullOrEmpty(cep))
+                return BadRequest("CEP inválido");
+
+            // Remove hífen e espaços
+            cep = new string(cep.Where(char.IsDigit).ToArray());
+
+            var endereco = await _cepInterface.EnderecoPorCep(cep);
+
+            if (endereco == null)
+                return NotFound();
+
+            return Ok(new
+            {
+                logradouro = endereco.Logradouro,
+                bairro = endereco.Bairro,
+                cidade = endereco.Localidade,
+                uf = endereco.Uf
+            });
+        }
+
     }
 }

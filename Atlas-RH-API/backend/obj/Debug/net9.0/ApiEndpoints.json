@@ -238,6 +238,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "backend.Controllers.FuncionarioController",
+    "Method": "BuscarCep",
+    "RelativePath": "api/Funcionario/cep/{cep}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cep",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "backend.Controllers.LoginController",
     "Method": "Login",
     "RelativePath": "api/Login/Login",

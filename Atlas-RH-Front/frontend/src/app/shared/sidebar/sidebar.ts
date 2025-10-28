@@ -22,6 +22,6 @@ export class Sidebar {
   }
 
   irParaHome() {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/homeUsuario']);
   }
 }

@@ -36,7 +36,7 @@ export class EditarCargo implements OnInit {
     this.cargoService.EditarCargo(cargo).subscribe((response) => {
       if (response.dados != null) {
         this.toastr.success(response.mensagem, 'Sucesso!');
-        this.router.navigate(['/home-cargo']);
+        this.router.navigate(['/homeCargo']);
       } else {
         this.toastr.error(response.mensagem, 'Error!');
       }
