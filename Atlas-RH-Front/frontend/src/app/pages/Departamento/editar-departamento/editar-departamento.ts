@@ -9,7 +9,7 @@ import { FormularioDepartamento } from '../../../componentes/formulario-departam
 
 @Component({
   selector: 'app-editar-departamento',
-  imports: [NgIf, CommonModule, FormularioDepartamento, FormularioDepartamento],
+  imports: [NgIf, CommonModule, FormularioDepartamento],
   templateUrl: './editar-departamento.html',
   styleUrl: './editar-departamento.css',
 })

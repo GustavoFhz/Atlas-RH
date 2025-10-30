@@ -19,4 +19,6 @@ export interface FuncionarioModel {
   departamento?: DepartamentoModel;
   cargoId: number;
   cargo?: CargoModel;
+
+  
 }

@@ -20,7 +20,7 @@ export class FormularioDepartamento implements OnInit {
   departamentoFrom!: FormGroup;
 
   ngOnInit(): void {
-    const isCadastro = this.btnAcao === 'Cadastrar';
+   
 
     this.departamentoFrom = new FormGroup({
       id: new FormControl(

@@ -42,6 +42,8 @@ export class FormularioFuncionario implements OnInit {
   ) {}
 
   ngOnInit(): void {
+     
+
     this.funcionarioForm = new FormGroup({
       id: new FormControl(
         this.dadosFuncionarios && 'id' in this.dadosFuncionarios ? this.dadosFuncionarios.id : null
@@ -53,7 +55,7 @@ export class FormularioFuncionario implements OnInit {
         Validators.email,
       ]),
       salario: new FormControl(this.dadosFuncionarios?.salario ?? 0, Validators.required),
-      dataAdmissao: new FormControl(new Date().toISOString().substring(0, 10), Validators.required), // seta hoje
+      dataAdmissao: new FormControl(new Date(), Validators.required),
       status: new FormControl(this.dadosFuncionarios?.status ?? '', Validators.required),
       cep: new FormControl(this.dadosFuncionarios?.cep ?? '', Validators.required),
 
@@ -90,13 +92,13 @@ export class FormularioFuncionario implements OnInit {
 
     this.departamentoService.BuscarDepartamentos().subscribe({
       next: (response) => {
-        this.departamentos = response.dados;
+        this.departamentos = response.dados ?? response;
       },
     });
 
     this.cargoService.BuscarCargos().subscribe({
       next: (response) => {
-        this.cargos = response.dados;
+        this.cargos = response.dados ?? response;
       },
     });
   }
