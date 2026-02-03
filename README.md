@@ -48,12 +48,14 @@ backend/
  ├── Config/           # Configurações de Middlewares (Swagger, etc)
  ├── Tests/            # Testes Unitários e Mocking
  └── Program.cs        # Inicialização da aplicação
+
 🚀 Como Executar o ProjetoClone o repositórioBashgit clone [https://github.com/GustavoFhz/Atlas-RH.git](https://github.com/GustavoFhz/Atlas-RH.git)
 Acesse a pasta do backendBashcd Atlas-RH/Atlas-RH-API/backend
 Restaure as dependênciasBashdotnet restore
 Configuração do Banco de DadosAtualize o arquivo .env (ou appsettings.json) com sua Connection String.Execute as migrations:Bashdotnet ef database update
 Rode a aplicaçãoBashdotnet run
 Acesse a documentaçãoAbra o navegador em: https://localhost:7070/swagger🧪 Testes UnitáriosA qualidade do Atlas RH é garantida por testes automatizados. Para rodar a suíte de testes, execute:Bashdotnet test
+
 Nota: Utilizamos xUnit para estrutura de testes e Moq para isolar as dependências dos Services e Controllers.📋 Endpoints PrincipaisMétodoEndpointDescriçãoGET/api/departamentosLista todos os departamentosPOST/api/departamentosCadastra um novo departamentoGET/api/departamentos/{id}/funcionariosLista funcionários por departamentoGET/api/cargosLista todos os cargosPOST/api/cargosRegistra um novo cargoPUT/api/cargosEdita um cargo existenteDELETE/api/cargos/{id}Remove um cargo do sistemaPadrão de RespostaTodas as requisições retornam um objeto padronizado:JSON{
   "status": true,
   "mensagem": "Operação realizada com sucesso",
