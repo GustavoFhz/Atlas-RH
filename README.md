@@ -30,8 +30,8 @@ Ela permite o gerenciamento completo de departamentos, cargos e funcionários, i
 * **Segurança:** JWT Authentication
 
 ### Frontend
-* **Framework:** [Insira Angular / React ou Vue aqui]
-* **Estilização:** [Insira Bootstrap ou Tailwind CSS aqui]
+* **Framework:** Angular 
+* **Estilização:**  Bootstrap 
 
 ---
 
