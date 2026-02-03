@@ -1,111 +1,62 @@
-📘 Atlas RH
-🏗️ Sobre o projeto
+# 📘 Atlas RH
 
-O Atlas RH é uma aplicação full-stack para gestão de recursos humanos, construída com .NET 9 no backend e tecnologias modernas no frontend.
-Ela permite gerenciar departamentos, cargos e funcionários, garantindo autenticação segura, testes automatizados e documentação clara.
+![Status do Projeto](https://img.shields.io/badge/Status-Em_Desenvolvimento-blue?style=for-the-badge)
+![.NET Version](https://img.shields.io/badge/.NET-9.0-purple?style=for-the-badge&logo=dotnet)
 
-Principais características:
+## 🏗️ Sobre o Projeto
 
-🧱 Arquitetura organizada por camadas (Controllers, Services, DTOs, Data)
+O **Atlas RH** é uma solução full-stack robusta para a gestão estratégica de recursos humanos. Desenvolvida com as tecnologias mais recentes do ecossistema .NET, a aplicação foca em escalabilidade, segurança e testabilidade.
 
-🔐 Autenticação JWT para segurança
+Ela permite o gerenciamento completo de departamentos, cargos e funcionários, integrando um sistema de autenticação segura e documentação automatizada para facilitar o consumo da API.
 
-🧪 Testes unitários no backend para garantir qualidade
+### Principais Características
 
-📘 Documentação automática com Swagger
+* 🧱 **Arquitetura Limpa:** Organização estruturada em camadas (Controllers, Services, DTOs, Data).
+* 🔐 **Segurança:** Autenticação e autorização via JWT (JSON Web Token).
+* 🧪 **Qualidade de Código:** Cobertura de testes unitários no backend.
+* 📘 **API Ready:** Documentação interativa e automática via Swagger.
+* ⚡ **Modernidade:** Preparado para integração com frameworks frontend de última geração.
 
-⚡ Integração com frontend moderno
+---
 
-⚙️ Tecnologias utilizadas
-Backend
+## ⚙️ Tecnologias Utilizadas
 
-🧩 .NET 9 / ASP.NET Core Web API
+### Backend
+* **Framework:** .NET 9 / ASP.NET Core Web API
+* **ORM:** Entity Framework Core (SQL Server)
+* **Documentação:** Swagger (Swashbuckle)
+* **Mapeamento:** AutoMapper
+* **Testes:** xUnit & Moq
+* **Segurança:** JWT Authentication
 
-🗄️ Entity Framework Core (SQL Server)
+### Frontend
+* **Framework:** [Insira Angular / React ou Vue aqui]
+* **Estilização:** [Insira Bootstrap ou Tailwind CSS aqui]
 
-📜 Swagger (Swashbuckle)
+---
 
-🔄 AutoMapper
+## 📂 Estrutura de Pastas (Backend)
 
-🧪 xUnit / Moq (testes unitários)
 
-🔐 JWT Authentication
 
-Frontend
-
-💻 Angular / React / Vue (colocar a que você usa)
-
-🎨 Bootstrap / Tailwind CSS (estilização)
-
-📂 Estrutura principal do backend
+```text
 backend/
- ├── Controllers/
- │   ├── CargoController.cs
- │   ├── DepartamentoController.cs
- │   ├── FuncionarioController.cs
- │   ├── LoginController.cs
- │   └── UsuarioController.cs
- ├── Services/
- │   ├── Cargo/
- │   ├── Departamento/
- │   └── Funcionario/
- ├── Dto/
- │   ├── Cargo/
- │   ├── Departamento/
- │   ├── Funcionario/
- │   ├── Senha/
- │   └── Usuario/
- ├── Data/
- │   └── AppDbContext.cs
- ├── Config/
- │   └── SwaggerConfig.cs
- ├── Tests/
- │   └── UnitTests/
- └── Program.cs
- 
-🚀 Como executar o projeto
-
-1. Clone o repositório
-git clone https://github.com/GustavoFhz/Atlas-RH.git
-2. Acesse a pasta do backend
-cd Atlas-RH/Atlas-RH-API/backend
-3. dotnet restore
-4. Configure a conexão com o banco de dados
-Atualize o arquivo .env com a string de conexão correta
-dotnet ef database update
-5. Execute a aplicação
-dotnet run
-6. Acesse a documentação
-https://localhost:7070/swagger
-
-
-🧪 Testes unitários
-
-Para rodar os testes:
-dotnet test
-
-Todos os testes são implementados usando xUnit e Moq, garantindo que Services e Controllers funcionem corretamente.
-
-📋 Endpoints principais
-Método	Endpoint	Descrição
-GET	/api/departamentos	Lista todos os departamentos
-POST	/api/departamentos	Cadastra um novo departamento
-GET	/api/departamentos/{id}/funcionarios	Lista funcionários por departamento
-GET	/api/cargos	Lista todos os cargos
-POST	/api/cargos	Registra um cargo
-PUT	/api/cargos	Edita um cargo
-DELETE	/api/cargos/{id}	Remove um cargo
-
-Padrão de resposta
-{
+ ├── Controllers/      # Pontos de entrada da API (REST)
+ ├── Services/         # Lógica de negócio e regras de domínio
+ ├── Dto/              # Objetos de transferência de dados
+ ├── Data/             # Contexto do Banco de Dados (EF Core)
+ ├── Config/           # Configurações de Middlewares (Swagger, etc)
+ ├── Tests/            # Testes Unitários e Mocking
+ └── Program.cs        # Inicialização da aplicação
+🚀 Como Executar o ProjetoClone o repositórioBashgit clone [https://github.com/GustavoFhz/Atlas-RH.git](https://github.com/GustavoFhz/Atlas-RH.git)
+Acesse a pasta do backendBashcd Atlas-RH/Atlas-RH-API/backend
+Restaure as dependênciasBashdotnet restore
+Configuração do Banco de DadosAtualize o arquivo .env (ou appsettings.json) com sua Connection String.Execute as migrations:Bashdotnet ef database update
+Rode a aplicaçãoBashdotnet run
+Acesse a documentaçãoAbra o navegador em: https://localhost:7070/swagger🧪 Testes UnitáriosA qualidade do Atlas RH é garantida por testes automatizados. Para rodar a suíte de testes, execute:Bashdotnet test
+Nota: Utilizamos xUnit para estrutura de testes e Moq para isolar as dependências dos Services e Controllers.📋 Endpoints PrincipaisMétodoEndpointDescriçãoGET/api/departamentosLista todos os departamentosPOST/api/departamentosCadastra um novo departamentoGET/api/departamentos/{id}/funcionariosLista funcionários por departamentoGET/api/cargosLista todos os cargosPOST/api/cargosRegistra um novo cargoPUT/api/cargosEdita um cargo existenteDELETE/api/cargos/{id}Remove um cargo do sistemaPadrão de RespostaTodas as requisições retornam um objeto padronizado:JSON{
   "status": true,
   "mensagem": "Operação realizada com sucesso",
   "dados": { }
 }
-
-👨‍💻 Autor
-
-Gustavo Fhz
-📧 gustavojesus79@gmail.com
-
-💼 GitHub
+👨‍💻 AutorGustavo Fhz 📫 gustavojesus79@gmail.com💼 Meu Perfil no GitHub
