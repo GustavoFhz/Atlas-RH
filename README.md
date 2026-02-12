@@ -142,8 +142,5 @@ Todas as requisições retornam um objeto padronizado:
 
 💼 [Meu Perfil no GitHub](https://www.google.com/search?q=https://github.com/GustavoFhz)
 
-```
 
-Algo mais que eu possa ajustar para você?
 
-```
