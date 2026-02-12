@@ -1,5 +1,3 @@
-Entendido. Aqui está o conteúdo puro, pronto para você copiar e salvar como um arquivo `.txt` ou diretamente no seu `README.md`.
-
 ```text
 # 📘 Atlas RH
 
