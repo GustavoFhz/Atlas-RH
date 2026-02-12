@@ -1,15 +1,19 @@
+Entendido. Aqui está o conteúdo puro, pronto para você copiar e salvar como um arquivo `.txt` ou diretamente no seu `README.md`.
+
+```text
 # 📘 Atlas RH
 
 ![Status do Projeto](https://img.shields.io/badge/Status-Em_Desenvolvimento-blue?style=for-the-badge)
 ![.NET Version](https://img.shields.io/badge/.NET-9.0-purple?style=for-the-badge&logo=dotnet)
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
 
 ## 🏗️ Sobre o Projeto
 
 O **Atlas RH** é uma solução full-stack robusta para a gestão estratégica de recursos humanos. Desenvolvida com as tecnologias mais recentes do ecossistema .NET, a aplicação foca em escalabilidade, segurança e testabilidade.
 
-Ela permite o gerenciamento completo de departamentos, cargos e funcionários, integrando um sistema de autenticação segura e documentação automatizada para facilitar o consumo da API.
+A plataforma permite o gerenciamento completo de departamentos, cargos e funcionários, integrando um sistema de autenticação segura e documentação automatizada para facilitar o consumo da API.
 
-### Principais Características
+### 🌟 Principais Características
 
 * 🧱 **Arquitetura Limpa:** Organização estruturada em camadas (Controllers, Services, DTOs, Data).
 * 🔐 **Segurança:** Autenticação e autorização via JWT (JSON Web Token).
@@ -21,7 +25,7 @@ Ela permite o gerenciamento completo de departamentos, cargos e funcionários, i
 
 ## ⚙️ Tecnologias Utilizadas
 
-### Backend
+### **Backend**
 * **Framework:** .NET 9 / ASP.NET Core Web API
 * **ORM:** Entity Framework Core (SQL Server)
 * **Documentação:** Swagger (Swashbuckle)
@@ -29,15 +33,13 @@ Ela permite o gerenciamento completo de departamentos, cargos e funcionários, i
 * **Testes:** xUnit & Moq
 * **Segurança:** JWT Authentication
 
-### Frontend
+### **Frontend**
 * **Framework:** Angular 
-* **Estilização:**  Bootstrap 
+* **Estilização:** Bootstrap 
 
 ---
 
 ## 📂 Estrutura de Pastas (Backend)
-
-
 
 ```text
 backend/
@@ -49,17 +51,101 @@ backend/
  ├── Tests/            # Testes Unitários e Mocking
  └── Program.cs        # Inicialização da aplicação
 
----
-🚀 Como Executar o ProjetoClone o repositórioBashgit clone [https://github.com/GustavoFhz/Atlas-RH.git](https://github.com/GustavoFhz/Atlas-RH.git)
-Acesse a pasta do backendBashcd Atlas-RH/Atlas-RH-API/backend
-Restaure as dependênciasBashdotnet restore
-Configuração do Banco de DadosAtualize o arquivo .env (ou appsettings.json) com sua Connection String.Execute as migrations:Bashdotnet ef database update
-Rode a aplicaçãoBashdotnet run
-Acesse a documentaçãoAbra o navegador em: https://localhost:7070/swagger🧪 Testes UnitáriosA qualidade do Atlas RH é garantida por testes automatizados. Para rodar a suíte de testes, execute:Bashdotnet test
+```
 
-Nota: Utilizamos xUnit para estrutura de testes e Moq para isolar as dependências dos Services e Controllers.📋 Endpoints PrincipaisMétodoEndpointDescriçãoGET/api/departamentosLista todos os departamentosPOST/api/departamentosCadastra um novo departamentoGET/api/departamentos/{id}/funcionariosLista funcionários por departamentoGET/api/cargosLista todos os cargosPOST/api/cargosRegistra um novo cargoPUT/api/cargosEdita um cargo existenteDELETE/api/cargos/{id}Remove um cargo do sistemaPadrão de RespostaTodas as requisições retornam um objeto padronizado:JSON{
+---
+
+## 🚀 Como Executar o Projeto
+
+1. **Clone o repositório**
+```bash
+git clone [https://github.com/GustavoFhz/Atlas-RH.git](https://github.com/GustavoFhz/Atlas-RH.git)
+
+```
+
+
+2. **Acesse a pasta do backend**
+```bash
+cd Atlas-RH/Atlas-RH-API/backend
+
+```
+
+
+3. **Restaure as dependências**
+```bash
+dotnet restore
+
+```
+
+
+4. **Configuração do Banco de Dados**
+* Atualize o arquivo `appsettings.json` com sua Connection String.
+* Execute as migrations:
+
+
+```bash
+dotnet ef database update
+
+```
+
+
+5. **Rode a aplicação**
+```bash
+dotnet run
+
+```
+
+
+> 🌐 Acesse a documentação em: `https://localhost:7070/swagger`
+
+
+
+### 🧪 Testes Unitários
+
+Para rodar a suíte de testes automatizados, execute:
+
+```bash
+dotnet test
+
+```
+
+---
+
+## 📋 Endpoints Principais
+
+| Método | Endpoint | Descrição |
+| --- | --- | --- |
+| **GET** | `/api/departamentos` | Lista todos os departamentos |
+| **POST** | `/api/departamentos` | Cadastra um novo departamento |
+| **GET** | `/api/departamentos/{id}/funcionarios` | Lista funcionários por departamento |
+| **GET** | `/api/cargos` | Lista todos os cargos |
+| **POST** | `/api/cargos` | Registra um novo cargo |
+| **PUT** | `/api/cargos` | Edita um cargo existente |
+| **DELETE** | `/api/cargos/{id}` | Remove um cargo do sistema |
+
+### **Padrão de Resposta**
+
+Todas as requisições retornam um objeto padronizado:
+
+```json
+{
   "status": true,
   "mensagem": "Operação realizada com sucesso",
   "dados": { }
 }
-👨‍💻 AutorGustavo Fhz 📫 gustavojesus79@gmail.com💼 Meu Perfil no GitHub
+
+```
+
+---
+
+## 👨‍💻 Autor
+
+**Gustavo Fhz** 📫 [gustavojesus79@gmail.com](mailto:gustavojesus79@gmail.com)
+
+💼 [Meu Perfil no GitHub](https://www.google.com/search?q=https://github.com/GustavoFhz)
+
+```
+
+Algo mais que eu possa ajustar para você?
+
+```
