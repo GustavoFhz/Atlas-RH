@@ -49,6 +49,7 @@ backend/
  ├── Tests/            # Testes Unitários e Mocking
  └── Program.cs        # Inicialização da aplicação
 
+---
 🚀 Como Executar o ProjetoClone o repositórioBashgit clone [https://github.com/GustavoFhz/Atlas-RH.git](https://github.com/GustavoFhz/Atlas-RH.git)
 Acesse a pasta do backendBashcd Atlas-RH/Atlas-RH-API/backend
 Restaure as dependênciasBashdotnet restore
